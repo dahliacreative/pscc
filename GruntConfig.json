@@ -1,0 +1,5 @@
+{
+    "srcFolder": "ui",
+    "buildFolder": "application/themes/rawnet",
+    "staticSite": false
+}

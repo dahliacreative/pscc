@@ -1,0 +1,13 @@
+// --------------------------------------------------------------------------
+// copy.sass
+// --------------------------------------------------------------------------
+// This mixin outputs copy styles based on the variable passed to it
+// --------------------------------------------------------------------------
+
+=copy($name, $color: "")
+    font-family: $base-font-family
+    font-size: $base-font-size
+    @if $color != ""
+        color: $color
+    @else
+        color: $base-color

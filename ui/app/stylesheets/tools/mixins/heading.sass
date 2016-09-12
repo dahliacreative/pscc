@@ -1,0 +1,18 @@
+// --------------------------------------------------------------------------
+// heading.sass
+// --------------------------------------------------------------------------
+// This mixin outputs heading styles based on the variable passed to it
+// --------------------------------------------------------------------------
+
+=heading($name, $color: "")
+    font-family: $base-font-family
+    font-weight: normal
+    line-height: 1
+    @if not map-has-key($heading-sizes, $name)
+        @warn "Warning: `#{$name}` is not a valid heading name."
+    @else
+        font-size: map-get($heading-sizes, $name)
+    @if $color != ""
+        color: $color
+    @else
+        color: $base-color

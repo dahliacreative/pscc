@@ -1,0 +1,15 @@
+.sass-cache
+*.DS_Store
+node_modules
+bower_components
+*.map
+application/themes/rawnet/app
+application/files/*
+application/languages/site/*
+application/config/secrets.php
+application/config/generated_overrides
+.idea
+
+# include some .ignore files in order to create the container directories in deployment
+!application/files/.ignore
+!application/config/generated_overrides/.ignore
