@@ -17,7 +17,7 @@
             <a href="#gallery" class="site-navigation__link" data-behaviour="scroll-to" data-url="gallery">Gallery</a>
         </li>
         <li class="site-navigation__item">
-            <a href="#gallery" class="site-navigation__link" data-behaviour="scroll-to" data-url="contact">Contact</a>
+            <a href="#contact" class="site-navigation__link" data-behaviour="scroll-to" data-url="contact">Contact</a>
         </li>
     </ul>
 </nav>

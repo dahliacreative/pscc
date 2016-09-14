@@ -35,34 +35,26 @@
         </div>
     </div>
 
-    <section id="about" class="section section--left">
-        <div class="section__content">
-            <div class="section__wrapper">
-                <h2 class="section__title">About</h2>
-                <p class="section__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem exercitationem debitis mollitia esse, porro architecto quo! Debitis quibusdam veniam eos porro corrupti obcaecati est recusandae expedita quidem dicta quos ratione in deleniti itaque atque natus delectus distinctio, temporibus accusamus et soluta ut dolorum. Magni obcaecati ut eligendi aut in odio!</p>
-            </div>
-        </div>
-    </section>
+    <div id="about">
+        <?php
+            $a = new Area('About');
+            $a->display($c);
+        ?>    
+    </div>
 
-    <section id="gallery" class="gallery">
-        
-    </section>
+    <div id="gallery">
+        <?php
+            $a = new Area('Gallery');
+            $a->display($c);
+        ?>    
+    </div>
 
-    <section id="contact" class="section section--right section--secondary">
-        <div class="section__content">
-            <div class="section__wrapper">
-                <h2 class="section__title">Contact</h2>
-                <p class="section__copy">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quis voluptatibus ut ratione animi, ad minus voluptas dolorum officia reprehenderit labore similique sapiente maiores autem.</p>
-                <dl class="contact-details">
-                    <dt class="contact-details__title">Mobile</dt>
-                    <dd class="contact-details__data"><a href="tel:07765066031">07765066031</a></dd>
-                    <dt class="contact-details__title">Email</dt>
-                    <dd class="contact-details__data"><a href="mailto:stefanie@peggysuesconfectionery.co.uk">stefanie@...</a></dd>
-                </dl>
-                <a href="#contact-form" class="button" data-behaviour="launch-modal" data-url="contact/form">Get in touch</a>
-            </div>
-        </div>
-    </section>
+    <div id="contact">
+        <?php
+            $a = new Area('Contact');
+            $a->display($c);
+        ?>
+    </div>
     
 </main>
 
