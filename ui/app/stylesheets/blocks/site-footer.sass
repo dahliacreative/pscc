@@ -1,0 +1,30 @@
+$site-footer-bgc: $cinder
+$site-footer-padding: spacing(4)
+
+.site-footer
+    +align-items(center)
+    +display(flex)
+    background-color: $site-footer-bgc
+    line-height: 1
+    padding: $site-footer-padding
+
+    &__copyright
+        color: #fff
+        font-size: 10px
+        font-weight: lighter
+        margin: 0
+
+    &__credit
+        color: $aluminium
+        font-size: 9px
+        margin: 10px 0 0
+        a
+            +transition(color .3s)
+            color: $willow-grove
+            text-decoration: none
+            font-weight: bold
+            +hover
+                color: $coriander
+
+    &__social
+        margin-left: auto

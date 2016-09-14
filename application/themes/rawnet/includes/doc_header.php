@@ -4,13 +4,9 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js no-touch">
     <head>
         <?php Loader::element('header_required', array('pageTitle' => isset($pageTitle) ? $pageTitle : ''));?>
-        <?php print SEOHelper::canonicalURL(); ?>
-        <?php print SEOHelper::metaOpenGraph($view->getThemePath()."/app/images/interface/logo.svg"); ?>
-        <?php print SEOHelper::metaRobotsTag(); ?>
-
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta name="viewport" content="width=device-width initial-scale=1.0">
         <link rel="stylesheet" href="<?php echo $view->getThemePath()?>/app/stylesheets/application.css">

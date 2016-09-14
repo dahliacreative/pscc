@@ -1,0 +1,49 @@
+$section-content-bgc: rgba($willow-grove, .9)
+$section-content-secondary-bgc: rgba($coriander, .8)
+$section-content-padding: spacing(10)
+$section-content-color: $satin-linen
+$section-content-secondary-color: $willow-grove
+
+.section
+    +display(flex)
+    margin: spacing(3) 0
+    
+    &--left &
+        &__content
+            margin-right: auto
+
+    &--secondary &
+        &__content
+            background-color: $section-content-secondary-bgc
+            color: $limed-ash
+            font-weight: bold
+        &__title
+            color: $finlandia
+
+    &--right &
+        &__content
+            margin-left: auto
+
+    &__content
+        +align-items(center)
+        +display(flex)
+        -webkit-backdrop-filter: blur(10px)
+        backdrop-filter: blur(10px)
+        background-color: $section-content-bgc
+        box-sizing: border-box
+        color: $section-content-color
+        padding: $section-content-padding
+        width: 50%
+
+        .button
+            margin-top: spacing(2)
+
+    &__title
+        color: $coriander
+        font-size: 26px
+        margin: 0 0 spacing(4)
+        &::after
+            content: ' /'
+
+    &__copy
+        margin: 0 0 spacing(2)

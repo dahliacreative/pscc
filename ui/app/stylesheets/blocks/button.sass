@@ -1,0 +1,16 @@
+$button-bgc: $limed-ash
+$button-hover-bgc: $finlandia
+$button-color: $satin-linen
+$button-padding: spacing(2)
+
+.button
+    +transition(background-color .3s)
+    background-color: $button-bgc
+    color: $button-color
+    display: inline-block
+    font-weight: bold
+    padding: $button-padding
+    text-decoration: none
+
+    +hover
+        background-color: $button-hover-bgc

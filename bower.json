@@ -27,6 +27,6 @@
     "slick-carousel": "1.6.0",
     "parsleyjs": "2.4.4",
     "selectron": "jquery-selectron#2.0.2",
-    "sharetastic": "jquery-sharetastic#1.3.2"
+    "sharetastic": "jquery-sharetastic#1.3.3"
   }
 }

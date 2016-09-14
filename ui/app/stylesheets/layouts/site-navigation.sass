@@ -1,0 +1,64 @@
+$navigation-padding: spacing(3) 0
+$navigation-link-padding: 0 spacing(1)
+$navigation-link-color: shade($iron, 25%)
+$navigation-link-color-active: $willow-grove
+$navigation-divide-color: $iron
+
+.site-navigation
+    line-height: 1
+    overflow: hidden
+    padding: $navigation-padding
+    position: relative
+
+    &--is-fixed
+        +position(fixed, 0px null null 50%)
+        +transform(translateX(-50%))
+        -webkit-backdrop-filter: blur(10px)
+        backdrop-filter: blur(10px)
+        background-color: rgba(#fff, 0.9)
+        max-width: 1180px
+        width: 100%
+        z-index: 10
+
+        .site-navigation__brand
+            +transform(translateY(-50%))
+
+        + main
+            margin-top: 72px
+
+    &__brand
+        +position(absolute, 50% null null 20px)
+        +transform(translateY(200%))
+        +transition(transform .5s $ease-in-out-quint)
+        width: 80px
+        margin-right: auto
+        outline: none
+        img
+            max-width: 100%
+    
+    &__list
+        +align-items(center)
+        +display(flex)
+        +justify-content(center)
+        list-style: none
+        margin: 0
+        padding: 0
+
+    &__item
+        &::after
+            content: "/"
+            color: $navigation-divide-color
+        &:last-child::after
+            display: none
+
+    &__link
+        +transition(color .2s)
+        color: $navigation-link-color
+        font-weight: bold
+        padding: $navigation-link-padding
+        text-decoration: none
+        text-transform: uppercase
+        &--is-active
+            color: $navigation-link-color-active
+        +hover
+            color: $navigation-link-color-active

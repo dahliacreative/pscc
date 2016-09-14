@@ -1,0 +1,55 @@
+.banner
+
+    &__slide
+        display: none
+        position: relative
+
+    &__media
+        max-width: 100%
+
+    &__content
+        +position(absolute, 50% null null 60px)
+        +transform(translateY(-50%))
+
+    &__title
+        color: #fff
+        font-size: 22px
+        font-weight: bold
+        letter-spacing: 4px
+        margin: 0
+        &::after
+            content: ' /'
+
+    &__copy
+        color: $viridian-green
+        font-weight: bold
+        margin: 10px 0 0
+
+    .slick-dots
+        +align-items(center)
+        +display(flex)
+        +position(absolute, 50% null null 60px)
+        +transform(translateY(225%))
+        list-style: none
+        margin: 0
+        padding: 0
+
+        .slick-active button
+            background-color: #FFF
+            &:focus
+                background-color: rgba(#fff, .5)
+
+        button
+            +size(10px)
+            background-color: transparent
+            border-radius: 50%
+            border: 2px solid #fff
+            box-sizing: border-box
+            cursor: pointer
+            font-size: 0
+            margin-right: 5px
+            outline: none
+            padding: 0
+            &:focus
+                border-style: dotted
+                border-width: 1px
