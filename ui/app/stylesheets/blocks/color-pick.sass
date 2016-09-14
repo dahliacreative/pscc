@@ -1,0 +1,23 @@
+.color-pick
+    display: none
+
+    &:checked + label
+        border-color: #3276b1
+        box-shadow: inset 0 0 0 2px #fff
+
+    + label
+        +size(45px)
+        border: 2px solid transparent
+        box-sizing: border-box
+        cursor: pointer
+        overflow: hidden
+        padding-left: 45px
+
+    &--primary + label
+        background-color: $willow-grove
+
+    &--secondary + label
+        background-color: $coriander
+
+    &--tertiary + label
+        background-color: $viridian-green

@@ -4,12 +4,20 @@ use Concrete\Core\File\File;
 use Application\Src\Models\Image;
 
 if($imageFileID) {
-    $image = Image::getUrlById($imageFileID, Image::SIZE_IMAGE_TEXT_BLOCK);
+    $image = Image::getUrlById($imageFileID, Image::SIZE_BANNER_IMAGE);
+}
+
+$classNames = ['section'];
+if($layout === 'right') {
+    $classNames[] = 'section--right';
+}
+if($color != 'default') {
+    $classNames[] = 'section--'.$color;
 }
 
 ?>
 
-<section class="section">
+<div class="<?php echo implode(" ", $classNames); ?>">
     <?php if($image) : ?>
         <img src="<?php echo $image; ?>" alt="" class="section__media" />
     <?php endif; ?>
@@ -28,6 +36,14 @@ if($imageFileID) {
                 </dl>
                 <a href="#contact-form" class="button" data-behaviour="launch-modal" data-url="contact/form">Get in touch</a>
             <?php endif; ?>
+            <?php if(strtolower($title) === 'gallery') : ?>
+                <select>
+                    <option value="all">View All</option>
+                    <option value="wedding">Weddings</option>
+                    <option value="celebration">Celebration</option>
+                    <option value="confectionery">Confectionery</option>
+                </select>
+            <?php endif; ?>
         </div>
     </div>
-</section>
+</div>

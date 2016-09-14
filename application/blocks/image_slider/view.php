@@ -19,7 +19,7 @@ $c = Page::getCurrentPage();
       <div class="banner__slide">
           <?php $f = File::getByID($row['fID']); ?>
           <?php if(is_object($f)) : ?>
-            <img src="<?php echo Image::getUrl($f, Image::SIZE_PRODUCT_SLIDER_IMAGE); ?>" alt="<?php echo $row['title'] ?>" class="banner__media">
+            <img src="<?php echo Image::getUrl($f, Image::SIZE_BANNER_IMAGE); ?>" alt="<?php echo $row['title'] ?>" class="banner__media">
           <?php endif; ?>
           <div class="banner__content">
              <h3 class="banner__title"><?php echo $row['title']; ?></h3>

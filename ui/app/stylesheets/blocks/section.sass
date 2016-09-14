@@ -1,13 +1,16 @@
-$section-content-bgc: rgba($willow-grove, .9)
+$section-content-bgc: rgba($willow-grove, .8)
 $section-content-secondary-bgc: rgba($coriander, .8)
 $section-content-padding: spacing(10)
 $section-content-color: $satin-linen
 $section-content-secondary-color: $willow-grove
+$section-content-tertiary-bgc: rgba($viridian-green, .8)
 
 .section
     +display(flex)
     margin: spacing(3) 0
-    
+    overflow: hidden
+    position: relative
+
     &--left &
         &__content
             margin-right: auto
@@ -20,9 +23,23 @@ $section-content-secondary-color: $willow-grove
         &__title
             color: $finlandia
 
+    &--tertiary &
+        &__content
+            background-color: $section-content-tertiary-bgc
+            color: $iron
+            font-weight: bold
+        &__title
+            color: #fff
+
     &--right &
         &__content
             margin-left: auto
+
+    &__media
+        +position(absolute, 50% null null 50%)
+        +transform(translate(-50%, -50%))
+        min-height: 100%
+        min-width: 100%
 
     &__content
         +align-items(center)
@@ -33,7 +50,9 @@ $section-content-secondary-color: $willow-grove
         box-sizing: border-box
         color: $section-content-color
         padding: $section-content-padding
+        position: relative
         width: 50%
+        z-index: 1
 
         .button
             margin-top: spacing(2)

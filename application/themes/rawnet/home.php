@@ -16,26 +16,32 @@
         $a->display($c);
     ?> 
 
-    <div id="about">
+    <section id="about">
         <?php
             $a = new Area('About');
             $a->display($c);
         ?>    
-    </div>
+    </section>
 
-    <div id="gallery">
+    <section id="gallery">
         <?php
             $a = new Area('Gallery');
             $a->display($c);
-        ?>    
-    </div>
+        ?>  
+        <div class="gallery" data-behaviour="gallery">
+            <?php
+                $a = new Area('Gallery Images');
+                $a->display($c);
+            ?>
+        </div>  
+    </section>
 
-    <div id="contact">
+    <section id="contact">
         <?php
             $a = new Area('Contact');
             $a->display($c);
         ?>
-    </div>
+    </section>
     
 </main>
 

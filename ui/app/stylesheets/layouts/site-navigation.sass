@@ -21,18 +21,20 @@ $navigation-divide-color: $iron
         z-index: 10
 
         .site-navigation__brand
-            +transform(translateY(-50%))
+            +transition(opacity .5s)
+            opacity: 1
 
         + main
             margin-top: 72px
 
     &__brand
         +position(absolute, 50% null null 20px)
-        +transform(translateY(200%))
-        +transition(transform .5s $ease-in-out-quint)
-        width: 80px
+        +transform(translateY(-50%))
+        +transition(opacity .2s)
         margin-right: auto
+        opacity: 0
         outline: none
+        width: 100px
         img
             max-width: 100%
     

@@ -11,17 +11,10 @@ use Concrete\Core\File\Image\Thumbnail\Type\Type;
  */
 class Image
 {
-    const SIZE_PRODUCT_LISTING_IMAGE = 'product_listing_image';
-    const SIZE_PRODUCT_DETAILS_MAIN_IMAGE = 'product_details_main_image';
-    const SIZE_PRODUCT_SLIDER_IMAGE = 'product_slider_image';
-    
-    const SIZE_NEWS_IMAGE = 'news_image';
-    const SIZE_BANNER_L = 'banner_l';
-    const SIZE_BANNER_M = 'banner_m';
-    const SIZE_BANNER_S = 'banner_s';
-    const SIZE_COVER_IMAGE = 'file_cover_image';
-    const SIZE_CARD_IMAGE = 'card_image';    
-    const SIZE_IMAGE_TEXT_BLOCK = "image_text_block";
+    const SIZE_BANNER_IMAGE = 'banner';
+    const SIZE_GALLERY_LARGE = 'gallery_large';
+    const SIZE_GALLERY_SMALL = 'gallery_small';
+    const SIZE_GALLERY_FULL = 'gallery_full';
 
     /**
      * Gets an image object by its id
