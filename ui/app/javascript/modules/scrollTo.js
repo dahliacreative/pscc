@@ -15,12 +15,21 @@ RN.scrollTo = function() {
 
   function scrollTo() {
     var trigger = $(this),
-        target = $(trigger.attr('href')),
+        url = trigger.data('url');
+
+    RN.history.update(url);
+    anchor(trigger);
+    return false;
+  }
+
+  function anchor(trigger) {
+    var target = $(trigger.attr('href')),
         distance = target.offset().top - 102,
-        url = '#/' + trigger.data('url');
+        url = trigger.data('url');
 
     $('.site-navigation__link--is-active')
-        .removeClass('site-navigation__link--is-active');
+        .removeClass('site-navigation__link--is-active')
+        .blur();
 
     if(trigger.hasClass('site-navigation__link')) {
         trigger
@@ -32,17 +41,15 @@ RN.scrollTo = function() {
             scrollTop: distance
         });
 
-    history.pushState(null, null, url);
     RN.meta.update({
         title: "Peggy Sue's Confectionery Company :: " + trigger.text(),
         url: 'http://www.peggysuesconfectionery.co.uk/' + url
     });
-
-    return false;
   }
 
   return {
-    init: init
+    init: init,
+    anchor: anchor
   };
 
 }();

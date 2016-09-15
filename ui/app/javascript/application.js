@@ -23,9 +23,10 @@ $(function() {
     // LOAD MODULES
     var modules = [
         'meta',
+        'gallery',
+        'history',
         'stickyNav',
-        'scrollTo',
-        'gallery'
+        'scrollTo'
     ];
 
     for(var i = 0; i < modules.length; i++) {

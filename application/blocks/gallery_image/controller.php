@@ -66,4 +66,18 @@ class Controller extends BlockController
 
         return $errors;
     }
+
+    public function create_seo_link($text) {
+        $letters = array(
+            '–', '—', '"', '"', '"', '\'', '\'', '\'',
+            '«', '»', '&', '÷', '>',    '<', '$', '/'
+        );
+
+        $text = str_replace($letters, " ", $text);
+        $text = str_replace("&", "and", $text);
+        $text = str_replace("?", "", $text);
+        $text = strtolower(str_replace(" ", "-", $text));
+
+        return ($text);
+    }
 }

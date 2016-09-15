@@ -13,10 +13,9 @@ if($imageFileID) {
 }
 
 $catClasses = implode(' ', json_decode($categories));
-
 ?>
 
-<a href="<?php echo $fullimage; ?>" data-title="<?php echo $title; ?>" data-description="<?php echo $description ?>" class="gallery__item all <?php echo $catClasses; ?>" data-behaviour="show-gallery-image" rel="gallery">
+<a href="<?php echo $fullimage; ?>" data-url="/#/gallery/<?php echo $controller->create_seo_link($title); ?>" data-title="<?php echo $title; ?>" data-description="<?php echo $description ?>" class="gallery__item all <?php echo $catClasses; ?>" data-behaviour="show-gallery-image" rel="gallery">
     <?php if($image) : ?>
         <img src="<?php echo $image; ?>" alt="" class="gallery__image" />
     <?php endif; ?>

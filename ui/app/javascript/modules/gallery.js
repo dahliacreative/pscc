@@ -50,13 +50,13 @@ RN.gallery = function() {
 
     function urlify(a) {
         return a.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "-").replace(/^-+|-+$/g, '');
-    };
+    }
 
     function handleGalleryNavigation() {
         metaDefaults = RN.meta.getCurrent();
         var el = this.element,
-            url = '#/gallery/' + urlify(el.data('title'));
-        history.pushState(null, null, url);
+            url = el.data('url');
+        RN.history.update(url);
         RN.meta.update({
             title: "Peggy Sue's Confectionery Company : " + el.data('title'),
             url: 'http://www.peggysuesconfectionery.co.uk/' + url,
@@ -67,6 +67,7 @@ RN.gallery = function() {
         $('.gallery__description').html(el.data('description'));
         byElement('sharetastic-share')
             .sharetastic({
+                sprite: '/application/themes/rawnet/app/images/vendor/sharetastic.svg',
                 services: {
                     email: {
                         enabled: false
@@ -79,7 +80,7 @@ RN.gallery = function() {
     }
 
     function resetUrl() {
-        history.pushState(null, null, '#/gallery');
+        RN.history.update('/#/gallery');
         RN.meta.update({
             title: metaDefaults.title,
             url: metaDefaults.url,
