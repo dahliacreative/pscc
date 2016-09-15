@@ -8,7 +8,6 @@ $section-content-tertiary-bgc: rgba($viridian-green, .8)
 .section
     +display(flex)
     margin: spacing(3) 0
-    overflow: hidden
     position: relative
 
     &--left &
@@ -19,7 +18,6 @@ $section-content-tertiary-bgc: rgba($viridian-green, .8)
         &__content
             background-color: $section-content-secondary-bgc
             color: $limed-ash
-            font-weight: bold
         &__title
             color: $finlandia
 
@@ -27,13 +25,16 @@ $section-content-tertiary-bgc: rgba($viridian-green, .8)
         &__content
             background-color: $section-content-tertiary-bgc
             color: $iron
-            font-weight: bold
         &__title
             color: #fff
 
     &--right &
         &__content
             margin-left: auto
+
+    &__media-wrapper
+        +position(absolute, 0px)
+        overflow: hidden
 
     &__media
         +position(absolute, 50% null null 50%)

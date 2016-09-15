@@ -19,7 +19,9 @@ if($color != 'default') {
 
 <div class="<?php echo implode(" ", $classNames); ?>">
     <?php if($image) : ?>
-        <img src="<?php echo $image; ?>" alt="" class="section__media" />
+        <div class="section__media-wrapper">
+            <img src="<?php echo $image; ?>" alt="" class="section__media" />
+        </div>
     <?php endif; ?>
     <div class="section__content">
         <div class="section__wrapper">
@@ -40,7 +42,7 @@ if($color != 'default') {
                 <select data-behaviour="filter-gallery" data-element="custom-select">
                     <option value="all">View All</option>
                     <option value="wedding">Weddings</option>
-                    <option value="celebration">Celebration</option>
+                    <option value="celebration">Celebrations</option>
                     <option value="confectionery">Confectionery</option>
                 </select>
             <?php endif; ?>

@@ -31,6 +31,10 @@ $(function() {
         RN[modules[i]].init();
     }
 
+    // CUSTOM SELECTS
+    byElement('custom-select')
+        .selectron();
+
     // SLICK SLIDER
     byElement('banner-slider')
         .slick({ 
