@@ -3,7 +3,7 @@
     defined('C5_EXECUTE') or die("Access Denied.");
     $this->inc('includes/doc_header.php');
     $this->inc('includes/header.php');
-
+    $c = Page::getCurrentPage();
 ?>
 
 <main>
@@ -28,7 +28,11 @@
             $a = new Area('Gallery');
             $a->display($c);
         ?>  
-        <div class="gallery" data-behaviour="gallery">
+        <?php if ($c->isEditMode()) :  ?>
+            <div class="gallery">
+        <?php else : ?>
+            <div class="gallery" data-behaviour="gallery">
+        <?php endif; ?>
             <?php
                 $a = new Area('Gallery Images');
                 $a->display($c);

@@ -37,7 +37,7 @@ if($color != 'default') {
                 <a href="#contact-form" class="button" data-behaviour="launch-modal" data-url="contact/form">Get in touch</a>
             <?php endif; ?>
             <?php if(strtolower($title) === 'gallery') : ?>
-                <select>
+                <select data-behaviour="filter-gallery" data-element="custom-select">
                     <option value="all">View All</option>
                     <option value="wedding">Weddings</option>
                     <option value="celebration">Celebration</option>

@@ -11,9 +11,9 @@ if($imageFileID) {
     }
     $fullimage = Image::getUrlById($imageFileID, Image::SIZE_GALLERY_FULL_IMAGE);
 }
-if(is_array($categories)) {
-    $catClasses = implode(' ', $categories);
-}
+
+$catClasses = implode(' ', json_decode($categories));
+
 ?>
 
 <a href="<?php echo $fullimage; ?>" data-title="<?php echo $title; ?>" data-description="<?php echo $description ?>" class="gallery__item all <?php echo $catClasses; ?>" data-behaviour="show-gallery-image">

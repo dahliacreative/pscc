@@ -8,9 +8,12 @@ RN.gallery = function() {
 
   'use strict';
 
+  var gallery, filter;
+
   function init() {
-    var gallery = byBehaviour('gallery');
-    console.log(gallery)
+    gallery = byBehaviour('gallery');
+    filter = byBehaviour('filter-gallery');
+
     gallery
         .imagesLoaded(function() {
             gallery
@@ -19,7 +22,17 @@ RN.gallery = function() {
                     percentPosition: true
                 });
         });
-        
+
+    filter
+        .on('change', filterGallery);
+  }
+
+  function filterGallery() {
+    var selection = '.' + filter.val();
+    gallery
+        .isotope({
+            filter: selection
+        });
   }
 
   return {
