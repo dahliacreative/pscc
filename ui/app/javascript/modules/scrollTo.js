@@ -33,6 +33,10 @@ RN.scrollTo = function() {
         });
 
     history.pushState(null, null, url);
+    RN.meta.update({
+        title: "Peggy Sue's Confectionery Company :: " + trigger.text(),
+        url: 'http://www.peggysuesconfectionery.co.uk/' + url
+    });
 
     return false;
   }

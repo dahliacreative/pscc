@@ -5,8 +5,7 @@ $site-footer-padding: spacing(4)
     +align-items(center)
     +display(flex)
     background-color: $site-footer-bgc
-    line-height: 1
-    margin-top: spacing(3)
+    line-height: 1.2
     padding: $site-footer-padding
 
     &__copyright
@@ -29,3 +28,14 @@ $site-footer-padding: spacing(4)
 
     &__social
         margin-left: auto
+
+    +breakpoint(large)
+        padding: spacing(3)
+
+    +breakpoint(medium)
+        display: block
+        padding: spacing(2)
+        text-align: center
+
+        &__social
+            margin-top: spacing(1.5)

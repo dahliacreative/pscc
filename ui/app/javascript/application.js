@@ -22,6 +22,7 @@ $(function() {
 
     // LOAD MODULES
     var modules = [
+        'meta',
         'stickyNav',
         'scrollTo',
         'gallery'

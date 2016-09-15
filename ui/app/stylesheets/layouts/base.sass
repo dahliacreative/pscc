@@ -8,7 +8,18 @@ body
     max-width: 1240px
     padding: $body-padding
     
-
 .page
     background-color: #FFF
     padding: $page-padding
+
++breakpoint(large)
+    body
+        padding: spacing(1)
+    .page
+        padding: spacing(1.5)
+
++breakpoint(small)
+    body
+        padding: spacing(0.5)
+    .page
+        padding: spacing(1)

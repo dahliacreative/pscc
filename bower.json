@@ -27,6 +27,16 @@
       ],
       "isotope": [
         "bower_components/isotope/dist/isotope.pkgd.min.js"
+      ],
+      "fancybox": [
+        "bower_components/fancybox/source/jquery.fancybox.pack.js",
+        "bower_components/fancybox/source/jquery.fancybox.css",
+        "bower_components/fancybox/source/blank.gif",
+        "bower_components/fancybox/source/fancybox_loading.gif",
+        "bower_components/fancybox/source/fancybox_loading@2x.gif",
+        "bower_components/fancybox/source/fancybox_overlay.png",
+        "bower_components/fancybox/source/fancybox_sprite.png",
+        "bower_components/fancybox/source/fancybox_sprite@2x.png"
       ]
     }
   },
@@ -37,6 +47,7 @@
     "selectron": "jquery-selectron#2.0.2",
     "sharetastic": "jquery-sharetastic#1.3.3",
     "isotope": "3.0.1",
-    "imagesloaded": "4.1.1"
+    "imagesloaded": "4.1.1",
+    "fancybox": "2.1.5"
   }
 }

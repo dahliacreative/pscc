@@ -5,8 +5,10 @@ $section-content-color: $satin-linen
 $section-content-secondary-color: $willow-grove
 $section-content-tertiary-bgc: rgba($viridian-green, .8)
 
+section:first-of-type .section
+    margin-top: 0
+
 .section
-    +display(flex)
     margin: spacing(3) 0
     position: relative
 
@@ -66,4 +68,9 @@ $section-content-tertiary-bgc: rgba($viridian-green, .8)
             content: ' /'
 
     &__copy
-        margin: 0 0 spacing(2)
+        margin: 0
+        p
+            margin: 0 0 spacing(2)
+
+    +breakpoint(large)
+        margin: spacing(1.5) 0
