@@ -12,6 +12,7 @@ $(function() {
 
     'use strict';
 
+    // DETECT TOUCH
     RN.isTouch = false;
     $(document).on('touchstart', function() {
         RN.isTouch = true;
@@ -19,15 +20,18 @@ $(function() {
         $(document).off('touchstart');
     });
 
+    // LOAD MODULES
     var modules = [
         'stickyNav',
-        'scrollTo'
+        'scrollTo',
+        'gallery'
     ];
 
     for(var i = 0; i < modules.length; i++) {
         RN[modules[i]].init();
     }
 
+    // SLICK SLIDER
     byElement('banner-slider')
         .slick({ 
             arrows: false,
@@ -41,6 +45,7 @@ $(function() {
             puaseOnFocus: false
         });
 
+    // SOCIAL ICONS
     byBehaviour('sharetastic-social')
         .sharetastic({
             sprite: '/application/themes/rawnet/app/images/vendor/sharetastic.svg',

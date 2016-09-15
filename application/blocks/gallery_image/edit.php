@@ -6,9 +6,9 @@ use Concrete\Core\File\File;
 <div class="form-group">
     <?php echo $form->label('layout', t('Content Position')); ?><br/>
     <input type="radio" name="layout" value="small" id="smalllayout"/>&nbsp;
-    <label for="smalllayout">Large</label>&nbsp;&nbsp;
+    <label for="smalllayout">Small</label>&nbsp;&nbsp;
     <input type="radio" name="layout" value="large" id="largelayout"/>&nbsp;
-    <label for="largelayout">Small</label>
+    <label for="largelayout">Large</label>
 </div>
 <div class="form-group">
     <?php echo $form->label('imageFileID', t('Image')); ?>
@@ -23,8 +23,8 @@ use Concrete\Core\File\File;
     <?php echo Core::make("editor")->outputStandardEditor('description', $description); ?>
 </div>
 <div class="form-group">
-    <?php echo $form->label('categories', t('Categories'))?>
-    <select name="categories" multiple>
+    <?php echo $form->label('categories', t('Categories'))?><br>
+    <select name="categories[]" multiple style="width: 300px;">
         <option value="wedding">Weddings</option>
         <option value="celebration">Celebrations</option>
         <option value="confectionery">Confectionery</option>

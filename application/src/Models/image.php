@@ -12,9 +12,9 @@ use Concrete\Core\File\Image\Thumbnail\Type\Type;
 class Image
 {
     const SIZE_BANNER_IMAGE = 'banner';
-    const SIZE_GALLERY_LARGE = 'gallery_large';
-    const SIZE_GALLERY_SMALL = 'gallery_small';
-    const SIZE_GALLERY_FULL = 'gallery_full';
+    const SIZE_GALLERY_LARGE_IMAGE = 'gallery_large';
+    const SIZE_GALLERY_SMALL_IMAGE = 'gallery_small';
+    const SIZE_GALLERY_FULL_IMAGE = 'gallery_full';
 
     /**
      * Gets an image object by its id

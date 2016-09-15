@@ -44,6 +44,11 @@ class Controller extends BlockController
     {
         
     }
+
+    public function save($args) {
+        $args['categories'] = json_encode($args['categories']);
+        parent::save($args);
+    }
     
     /**
      * Server side validation to ensure required fields are entered
