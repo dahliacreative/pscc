@@ -29,5 +29,5 @@ use Concrete\Core\File\File;
 </div>
 <div class="form-group">
     <?php echo $form->label('content', t('Content'))?>
-    <?php echo $form->text('content', $content); ?>
+    <?php echo Core::make("editor")->outputStandardEditor('content', $content); ?>
 </div>

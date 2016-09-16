@@ -20,7 +20,7 @@ use Concrete\Core\File\File;
 </div>
 <div class="form-group">
     <?php echo $form->label('description', t('Description'))?>
-    <?php echo Core::make("editor")->outputStandardEditor('description', $description); ?>
+    <?php echo $form->text('description', $description); ?>
 </div>
 <div class="form-group">
     <?php echo $form->label('categories', t('Categories'))?><br>

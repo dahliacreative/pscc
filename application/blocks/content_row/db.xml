@@ -6,6 +6,6 @@
         <field name="color" type="C"></field>
         <field name="imageFileID" type="I"></field>
         <field name="title" type="X"></field>
-        <field name="content" type="X"></field>
+        <field name="content" type="X2"></field>
     </table>
 </schema>
