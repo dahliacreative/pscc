@@ -11,7 +11,7 @@ RN.history = function() {
     function init() {
         var hash = '/' + window.location.hash;
         if(hash === '/') {
-            update('/#/home');
+            history.replaceState(null, null, '/#/home');
         } else {
             navigate();
         }
@@ -22,7 +22,7 @@ RN.history = function() {
     function navigate() {
         var hash = '/' +  window.location.hash;
         if(hash === '/') {
-            update('/#/home');
+            history.replaceState(null, null, '/#/home');
         } else {
             if(hash.indexOf('gallery/') > -1) {
                 $('[data-url="' + hash + '"]')
