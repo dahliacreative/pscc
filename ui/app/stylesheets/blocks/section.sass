@@ -1,15 +1,18 @@
 $section-content-bgc: rgba($willow-grove, .8)
-$section-content-secondary-bgc: rgba($coriander, .8)
+$section-content-secondary-bgc: rgba($coriander, .95)
 $section-content-padding: spacing(10)
-$section-content-color: $satin-linen
+$section-content-color: $celeste
 $section-content-secondary-color: $willow-grove
 $section-content-tertiary-bgc: rgba($viridian-green, .8)
 
-section:first-of-type .section
-    margin-top: 0
+section
+    margin-bottom: spacing(3)
+
+    &#gallery
+        margin-bottom: 0
+    
 
 .section
-    margin: spacing(3) 0
     position: relative
 
     &--left &
@@ -20,15 +23,16 @@ section:first-of-type .section
         &__content
             background-color: $section-content-secondary-bgc
             color: $limed-ash
+            font-weight: bold
         &__title
             color: $finlandia
 
     &--tertiary &
         &__content
             background-color: $section-content-tertiary-bgc
-            color: $iron
+            color: $celeste
         &__title
-            color: #fff
+            color: $satin-linen
 
     &--right &
         &__content
@@ -43,6 +47,9 @@ section:first-of-type .section
         +transform(translate(-50%, -50%))
         min-height: 100%
         min-width: 100%
+
+    &__wrapper
+        width: 100%
 
     &__content
         +align-items(center)
@@ -61,9 +68,9 @@ section:first-of-type .section
             margin-top: spacing(2)
 
     &__title
-        color: $coriander
+        color: $satin-linen
         font-size: 26px
-        margin: 0 0 spacing(4)
+        margin: 0 0 spacing(2)
         &::after
             content: ' /'
 

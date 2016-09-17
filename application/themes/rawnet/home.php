@@ -46,6 +46,13 @@
             $a->display($c);
         ?>
     </section>
+
+    <div id="contact-form" class="modal" <?php if ($c->isEditMode()) echo 'style="display: block;"';  ?>>
+        <?php
+            $a = new Area('Contact Form');
+            $a->display($c);
+        ?>      
+    </div>
     
 </main>
 

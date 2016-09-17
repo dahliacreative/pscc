@@ -275,14 +275,14 @@ class MiniSurvey
             case 'select':
                 if ($this->frontEndMode) {
                     $selected = (!Request::request('Question'.$msqID)) ? 'selected="selected"' : '';
-                    $html .= '<option value="" '.$selected.'>----</option>';
+                    $html .= '<option value="" '.$selected.'>Please select an option</option>';
                 }
                 foreach ($options as $option) {
                     $checked = (Request::request('Question'.$msqID) == trim($option)) ? 'selected="selected"' : '';
                     $html .= '<option '.$checked.'>'.trim($option).'</option>';
                 }
 
-                return '<select class="form-control" name="Question'.$msqID.'" id="Question'.$msqID.'" >'.$html.'</select>';
+                return '<select class="form-control" data-element="custom-select" name="Question'.$msqID.'" id="Question'.$msqID.'" >'.$html.'</select>';
 
             case 'radios':
                 foreach ($options as $option) {

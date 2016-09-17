@@ -4,5 +4,8 @@ $header-padding: 0 0 spacing(3)
 .site-header
     +display(flex)
     +justify-content(center)
-    padding: $header-padding
     border-bottom: 1px solid $header-border-color
+    padding: $header-padding
+
+    +breakpoint(large)
+        padding: spacing(1) 0 spacing(2)

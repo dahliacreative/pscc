@@ -69,12 +69,7 @@ RN.gallery = function() {
             .sharetastic({
                 sprite: '/application/themes/rawnet/app/images/vendor/sharetastic.svg',
                 services: {
-                    email: {
-                        enabled: false
-                    },
-                    print: {
-                        enabled: false
-                    }
+                    print: false
                 }
             });
     }

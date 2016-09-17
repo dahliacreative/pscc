@@ -26,7 +26,8 @@ $(function() {
         'gallery',
         'history',
         'stickyNav',
-        'scrollTo'
+        'scrollTo',
+        'form'
     ];
 
     for(var i = 0; i < modules.length; i++) {
@@ -36,6 +37,12 @@ $(function() {
     // CUSTOM SELECTS
     byElement('custom-select')
         .selectron();
+
+    // MODAL
+    byBehaviour('launch-modal')
+        .fancybox({
+            padding: 0
+        });
 
     // SLICK SLIDER
     byElement('banner-slider')
@@ -58,33 +65,18 @@ $(function() {
             popup: false,
             services: {
                 instagram: {
-                    enabled: true,
                     href: 'https://www.instagram.com/peggysuesconfectioneryco/'
                 },
                 facebook: {
                     href: 'https://www.facebook.com/PeggySuesConfectioneryCo/'
                 },
-                twitter: {
-                    enabled: false
-                },
-                pinterest: {
-                    enabled: false
-                },
-                googleplus: {
-                    enabled: false
-                },
-                linkedin: {
-                    enabled: false
-                },
-                tumblr: {
-                    enabled: false
-                },
-                email: {
-                    enabled: false
-                },
-                print: {
-                    enabled: false
-                }
+                twitter: false,
+                pinterest: false,
+                googleplus: false,
+                linkedin: false,
+                tumblr: false,
+                email: false,
+                print: false
             }
         });
 

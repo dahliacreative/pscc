@@ -5,9 +5,9 @@ use Concrete\Core\File\File;
 ?>
 <div class="form-group">
     <?php echo $form->label('layout', t('Content Position')); ?><br/>
-    <input type="radio" name="layout" value="small" id="smalllayout"/>&nbsp;
+    <input type="radio" name="layout" value="small" id="smalllayout" required <?php if($layout === 'small') echo "checked" ?>/>&nbsp;
     <label for="smalllayout">Small</label>&nbsp;&nbsp;
-    <input type="radio" name="layout" value="large" id="largelayout"/>&nbsp;
+    <input type="radio" name="layout" value="large" id="largelayout" required <?php if($layout === 'large') echo "checked" ?>/>&nbsp;
     <label for="largelayout">Large</label>
 </div>
 <div class="form-group">
@@ -24,9 +24,15 @@ use Concrete\Core\File\File;
 </div>
 <div class="form-group">
     <?php echo $form->label('categories', t('Categories'))?><br>
-    <select name="categories[]" multiple style="width: 300px;">
-        <option value="wedding">Weddings</option>
-        <option value="celebration">Celebrations</option>
-        <option value="confectionery">Confectionery</option>
+    <select name="categories[]" multiple style="width: 300px;" required>
+        <?php if(isset($categories)) : ?>
+            <option value="wedding" <?php if(in_array('wedding', json_decode($categories))) echo 'selected'; ?>>Weddings</option>
+            <option value="celebration" <?php if(in_array('celebration', json_decode($categories))) echo 'selected'; ?>>Celebrations</option>
+            <option value="confectionery" <?php if(in_array('confectionery', json_decode($categories))) echo 'selected'; ?>>Confectionery</option>
+        <?php else : ?>
+            <option value="wedding">Weddings</option>
+            <option value="celebration">Celebrations</option>
+            <option value="confectionery">Confectionery</option>
+        <?php endif; ?>
     </select>
 </div>
