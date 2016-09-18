@@ -14,17 +14,24 @@ $site-footer-padding: spacing(4)
         font-weight: lighter
         margin: 0
 
+        a
+            color: $coriander
+            text-decoration: none
+            font-weight: bold
+            +hover
+                color: $satin-linen
+
     &__credit
         color: $aluminium
         font-size: 9px
         margin: 10px 0 0
         a
             +transition(color .3s)
-            color: $willow-grove
+            color: $coriander
             text-decoration: none
             font-weight: bold
             +hover
-                color: $coriander
+                color: $satin-linen
 
     &__social
         margin-left: auto
@@ -39,3 +46,10 @@ $site-footer-padding: spacing(4)
 
         &__social
             margin-top: spacing(1.5)
+
+    +breakpoint(small)
+        padding: spacing(2) spacing(1)
+
+        &__copyright,
+        &__credit
+            letter-spacing: 1px
