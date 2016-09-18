@@ -22,19 +22,25 @@
         +transform(translateY(-50%))
 
     &__title
-        color: #fff
+        color: $satin-linen
         font-size: 22px
         font-weight: bold
         letter-spacing: 4px
+        line-height: 1
         margin: 0
 
         &::after
             content: ' /'
 
-    &__copy
+    &__copy p
         color: $viridian-green
         font-weight: bold
+        line-height: 1.2
         margin: 10px 0 0
+
+        a
+            color: $satin-linen
+            text-decoration: none
 
     .slick-dots
         +align-items(center)
@@ -47,16 +53,16 @@
 
         .slick-active
             button
-                background-color: #FFF
+                background-color: $satin-linen
 
                 &:focus
-                    background-color: rgba(#fff, .5)
+                    background-color: rgba($satin-linen, .5)
 
         button
             +size(10px)
             background-color: transparent
             border-radius: 50%
-            border: 2px solid #fff
+            border: 2px solid $satin-linen
             box-sizing: border-box
             cursor: pointer
             font-size: 0
@@ -67,3 +73,47 @@
             &:focus
                 border-style: dotted
                 border-width: 1px
+
+    +breakpoint(large)
+        margin-bottom: spacing(1.5)
+
+        .slick-dots
+            +transform(none)
+            bottom: 20px
+            left: auto
+            right: 15px
+            top: auto
+
+        &__content
+            +transform(none)
+            background-color: rgba($cinder, .8)
+            bottom: 0
+            box-sizing: border-box
+            left: 0
+            padding: spacing(2)
+            top: auto
+            width: 100%
+
+        &__copy p
+            color: $satin-linen
+            margin-top: 5px
+
+            a
+                color: $satin-linen
+
+    +breakpoint(small)
+        margin-bottom: spacing(1)
+
+        .slick-dots
+            display: none !important
+
+        &__content
+            +position(static, auto)
+            background-color: $cinder
+
+        &__title
+            font-size: 18px
+            letter-spacing: 2px
+
+        &__copy p
+            font-size: 11px

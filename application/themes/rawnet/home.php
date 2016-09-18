@@ -16,14 +16,14 @@
         $a->display($c);
     ?> 
 
-    <section id="about">
+    <section class="row" id="about">
         <?php
             $a = new Area('About');
             $a->display($c);
         ?>    
     </section>
 
-    <section id="gallery">
+    <section class="row row--collapse" id="gallery">
         <?php
             $a = new Area('Gallery');
             $a->display($c);
@@ -40,7 +40,7 @@
         </div>  
     </section>
 
-    <section id="contact">
+    <section class="row" id="contact">
         <?php
             $a = new Area('Contact');
             $a->display($c);

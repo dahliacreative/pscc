@@ -1,16 +1,9 @@
 $section-content-bgc: rgba($willow-grove, .8)
-$section-content-secondary-bgc: rgba($coriander, .95)
+$section-content-secondary-bgc: rgba($coriander, .9)
 $section-content-padding: spacing(10)
 $section-content-color: $celeste
 $section-content-secondary-color: $willow-grove
 $section-content-tertiary-bgc: rgba($viridian-green, .8)
-
-section
-    margin-bottom: spacing(3)
-
-    &#gallery
-        margin-bottom: 0
-    
 
 .section
     position: relative
@@ -80,4 +73,14 @@ section
             margin: 0 0 spacing(2)
 
     +breakpoint(large)
-        margin: spacing(1.5) 0
+        &__content
+            padding: spacing(5)
+            width: 60%
+
+        &__title
+            margin-bottom: spacing(1)
+
+    +breakpoint(small)
+        &__content
+            padding: spacing(3)
+            width: 100%

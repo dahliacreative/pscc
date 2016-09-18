@@ -10,3 +10,12 @@
     &__option
         &--is-hovered
             font-weight: lighter
+
+    +breakpoint(large)
+        height: 40px
+        &__trigger
+            height: 40px
+            padding: 9px 50px 8px 10px
+        &--is-touch &
+            &__select
+                padding: 9px 50px 8px 10px

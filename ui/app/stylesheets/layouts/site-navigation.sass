@@ -32,12 +32,14 @@ $navigation-divide-color: $iron
         +transform(translateY(-50%))
         +transition(opacity .2s)
         margin-right: auto
+        height: 45px
         opacity: 0
         outline: none
         overflow: hidden
         text-indent: 100px
         width: 100px
         img
+            +position(absolute, 0px null null 0x)
             max-width: 100%
     
     &__list
@@ -67,5 +69,25 @@ $navigation-divide-color: $iron
         +hover
             color: $navigation-link-color-active
 
+    +breakpoint(xlarge)
+        &--is-fixed
+            +transform(none)
+            width: auto
+            left: 50px
+            right: 50px
+
+
     +breakpoint(large)
         padding: spacing(2) 0
+
+        &--is-fixed
+            left: 20px
+            right: 20px
+
+        .site-navigation__brand
+            display: none
+
+    +breakpoint(small)
+        &--is-fixed
+            left: 15px
+            right: 15px

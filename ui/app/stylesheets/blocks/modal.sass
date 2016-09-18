@@ -25,6 +25,9 @@
                     content: '*'
 
     input
+        &.ccm-input-date
+            width: 100% !important
+            
         &[type='submit']
             @extend .button
             border: 0
@@ -49,6 +52,9 @@
             &:focus
                 border-color: $cinder
                 opacity: 1
+
+            +breakpoint(large)
+                padding: spacing(1)
 
     textarea
         border-radius: 0

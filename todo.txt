@@ -1,0 +1,7 @@
+style fancybox buttons
+favicon
+test
+content
+run through checklist
+sort banner images so text works
+new banner images for another cake
