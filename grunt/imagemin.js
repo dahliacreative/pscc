@@ -1,16 +1,16 @@
 module.exports = {
-  dynamic: {  
+  dynamic: {
     options: {
-        svgoPlugins: [
-            {removeViewBox: false},
-            {removeUselessStrokeAndFill: false},
-            {removeEmptyAttrs: false}
+        plugins: [
+             {cleanupIDs: false},
+             {removeViewBox: false},
+             {removeUselessStrokeAndFill: false}
         ]
     },
     files: [{
-      expand: true,  
+      expand: true,
       cwd: '<%= config.buildFolder %>/app/images',
-      src: ['**/*.{png,jpg,gif}'],  
+      src: ['**/*.{png,jpg,gif,svg}'],
       dest: '<%= config.buildFolder %>/app/images'
     }]
   }
