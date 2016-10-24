@@ -3,11 +3,12 @@
     $c = Page::getCurrentPage();
     $p = new Permissions($c);
     $pagename = $c->getCollectionName();
+    $u = new User();
 ?>
 
         </div>
     
-        <?php if(!$p->canViewToolbar()) : ?>
+        <?php if(!$u->->IsLoggedIn()) : ?>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <?php endif; ?>
         <?php View::element('footer_required'); ?>
